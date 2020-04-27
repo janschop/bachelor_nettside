@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+<script type="text/javascript" src="script.js"></script>
+
+<body onload="setImg()">
+
+  <div class="split left">
+
+    <!-- The grid: four columns -->
+    <div class="row">
+      <div class="column">
+        <img src="img1t.jpg" alt="1" onclick="myFunction(this);" width="100%">
+      </div>
+      <div class="column">
+        <img src="img2t.jpg" alt="2" onclick="myFunction(this);" width="100%">
+      </div>
+      <div class="column">
+        <img src="img3t.jpg" alt="3" onclick="myFunction(this);" width="100%">
+      </div>
+      <div class="column">
+        <img src="img4t.jpg" alt="4" onclick="myFunction(this);" width="100%">
+      </div>
+    </div>
+
+    <div class="icon-bar">
+      <img src="pilV.png" alt="Gå til venstre i bildergalleriet" onclick width="32%">
+      <img src="pilH.png" alt="Gå til høyre i bildergalleriet" onclick width="32%">
+      <img src="knapp4.png" alt="Bytt mellom vedlegg og bilder" onclick="togglePdf();" width="32%">
+    </div>
+
+    <!-- The expanding image container -->
+    <div class="container">
+      <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
+        
+      <!-- Expanded image -->
+      <img id="expandedImg" onclick="startModal" style=width:100%>
+      <!-- Image text -->
+      <div id="imgtext"></div>
+    
+    </div>
+
+    <div class="containerPdf">
+      <div id="pdfId">
+        <embed src="testVedlegg.pdf#toolbar=0&navpanes=0&scrollbar=1" type="application/pdf" view=Fit width="100%" height="1000px"/>
+      </div>
+    </div>
+
+    
+
+ </div>
+
+  <div class="split right">
+    <embed src="ForprosjektGruppe2.pdf#toolbar=0&navpanes=0&scrollbar=1" type="application/pdf" view=Fit width="100%"
+    height="99%" />
+  </div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times; </span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+  
+  
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
+</body>
